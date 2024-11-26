@@ -1,3 +1,7 @@
+#closeDialogBtn:focus{
+    box-shadow: none;
+}
+
 body.modal-open {
     overflow-y: hidden;
 }
