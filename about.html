@@ -22,6 +22,7 @@
    <link rel="stylesheet" href="assets/css/elegantFont.css">
    <link rel="stylesheet" href="assets/css/default.css">
    <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
@@ -50,7 +51,54 @@
       </svg>
    </div>
    <!-- back to top end -->
-
+   <dialog class="contactDialog" id="dialog">
+      <div class="d-flex justify-content-between align-items-center px-3 py-2 border-bottom">
+         <p class="m-0 fw-bold text-dark">CONTACT US</p>
+         <button id="closeDialogBtn" type="button" aria-label="close" class="btn p-0">
+            <img src="./images/close.png" style="width: 20px;" alt="">
+         </button>
+      </div>
+      <div class="p-3">
+         <div class="contact__form">
+            <form>
+               <div class="row">
+                  <div class="col-xxl-6 col-xl-6 col-md-6">
+                     <div class="contact__form-input">
+                        <input type="text" placeholder="Your Name" name="name">
+                     </div>
+                  </div>
+                  <div class="col-xxl-6 col-xl-6 col-md-6">
+                     <div class="contact__form-input">
+                        <input type="email" placeholder="Your Email" name="email">
+                     </div>
+                  </div>
+                  <div class="col-xxl-12">
+                     <div class="contact__form-input">
+                        <input type="text" placeholder="Subject" name="subject">
+                     </div>
+                  </div>
+                  <div class="col-xxl-12">
+                     <div class="contact__form-input">
+                        <textarea placeholder="Enter Your Message" name="message"></textarea>
+                     </div>
+                  </div>
+                  <div class="col-xxl-12">
+                     <div class="contact__form-agree  d-flex align-items-center mb-20">
+                        <input class="e-check-input" type="checkbox" id="e-agree">
+                        <label class="e-check-label" for="e-agree">I agree to the<a href="#">Terms &
+                              Conditions</a></label>
+                     </div>
+                  </div>
+                  <div class="col-xxl-12">
+                     <div class="contact__btn">
+                        <button type="submit" class="e-btn">Send your message</button>
+                     </div>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+   </dialog>
    <!-- header area start -->
    <header>
       <div id="header-sticky" class="header__area header__transparent header__padding header__white">
@@ -179,7 +227,7 @@
                            </li>
                         </ul>
                      </div>
-                     <a href="contact.html" class="e-btn e-btn-border">apply now</a>
+                     <button class="e-btn e-btn-border contactDialogOpenBtn">apply now</button>
                   </div>
                </div>
             </div>
@@ -265,7 +313,7 @@
                         </p>
                      </div>
                      <div class="why__btn">
-                        <a href="contact.html" class="e-btn e-btn-3 mr-30">Join Now</a>
+                        <button class="e-btn e-btn-3 mr-30 contactDialogOpenBtn">Join Now</button>
                         <a href="about.html" class="link-btn">
                            Learn More
                            <i class="far fa-arrow-right"></i>
@@ -483,6 +531,7 @@
    <script src="assets/js/wow.min.js"></script>
    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
    <script src="assets/js/main.js"></script>
+   <script src="./app.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,34 @@
+body.modal-open {
+    overflow-y: hidden;
+}
+
+body.modal-open::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+}
+
+dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    max-width: 400px;
+    min-width: 360px;
+    border-radius: 4px;
+    border: 0;
+    box-shadow: 0 5px 30px 0 #000;
+    animation: fadeIn 300ms ease both;
+}
+
+dialog::backdrop {
+    animation: fadeIn 300ms ease both;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
