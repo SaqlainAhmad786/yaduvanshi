@@ -32,3 +32,108 @@ dialog::backdrop {
     background: rgba(0, 0, 0, 0.5);
     z-index: 2;
 }
+
+.floating-widgets {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 999;
+}
+
+.floating-widgets i {
+    color: white;
+}
+
+.whatsapp-widget-after {
+    background-color: rgb(35 217 72 / 70%);
+    border-radius: 50%;
+    padding: 1rem;
+    animation: w-pulse-animation 1.5s infinite;
+}
+
+.widgets1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100vh;
+    aspect-ratio: 1;
+    height: 48px;
+    animation: icon-rotate 750ms 500ms infinite;
+    transition: -webkit-transform 250ms;
+    transition: transform 250ms,
+}
+
+.whatsapp-widget {
+    background-color: #1cd741;
+    font-size: 2em;
+}
+
+@-webkit-keyframes w-pulse-animation {
+    0% {
+        box-shadow: 0 0 0 0px #1cd741aa;
+    }
+
+    100% {
+        box-shadow: 0 0 0 16px #1cd7411a;
+    }
+}
+
+@keyframes w-pulse-animation {
+    0% {
+        box-shadow: 0 0 0 0px #1cd741aa;
+    }
+
+    100% {
+        box-shadow: 0 0 0 16px #1cd7411a;
+    }
+}
+
+@-webkit-keyframes c-pulse-animation {
+    0% {
+        box-shadow: 0 0 0 0px rgba(230, 8, 8, 0.7);
+    }
+
+    100% {
+        box-shadow: 0 0 0 16px rgba(230, 8, 8, 0.2);
+    }
+}
+
+@keyframes c-pulse-animation {
+    0% {
+        box-shadow: 0 0 0 0px rgba(230, 8, 8, 0.7);
+    }
+
+    100% {
+        box-shadow: 0 0 0 16px rgba(230, 8, 8, 0.2);
+    }
+}
+
+@-webkit-keyframes icon-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    20% {
+        transform: rotate(-20deg);
+    }
+
+    40% {
+        transform: rotate(20deg);
+    }
+
+    60% {
+        -webkit-transform: rotate(-20deg);
+        transform: rotate(-20deg);
+    }
+
+    80% {
+        transform: rotate(20deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
